@@ -1,14 +1,8 @@
 import {Data} from '../types/data'
 
-export const render = (doc: Document, data:Data):void => {
-    const c: HTMLCanvasElement | null = doc.querySelector('canvas#canvas')
-    const div:HTMLDivElement | null = doc.querySelector('div#cont')
-
-    if (c&&div) {
-        console.log(c, div)
-        div.style.display = "none"
-        c.style.display = "block"
-    
+export const render = (c: HTMLCanvasElement | null, data:Data):void => {
+    if(c) {
+        c.style.display = 'block'
         const ctx = c.getContext("2d")
         const img = new Image()
         const logo = new Image()
@@ -65,6 +59,7 @@ export const render = (doc: Document, data:Data):void => {
         }
         img.src = data.icon
         logo.src = "/icons/genesis.svg"
+        console.log(img)
     
         const levels = [{
             Number: "0",
@@ -84,4 +79,5 @@ export const render = (doc: Document, data:Data):void => {
             Color:"#c54f4f"
         }]
     }
+        
 }
