@@ -1,9 +1,5 @@
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
+  font-family: 'Rubik', sans-serif;
   box-sizing: border-box;
   position: relative;
 }
@@ -16,10 +12,5 @@ body {
   justify-content:center;
   align-items:center;
   background:#262626;
-  font-family: 'Rubik', sans-serif;
-}
-
-canvas {
-  width:16.5cm;
-  height:24cm;
+  
 }
